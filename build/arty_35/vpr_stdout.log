@@ -11,7 +11,7 @@ vtr-users@googlegroups.com
 This is free open source code under MIT license.
 
 VPR was run with the following command-line:
-genfasm /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/arch.timing.xml /home/yatharth/gf180_project/PUF/build/arty_35/PUF.eblif --device xc7a50t-test --read_rr_graph /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.rr_graph.real.bin --max_router_iterations 500 --routing_failure_predictor off --router_high_fanout_threshold -1 --constant_net_method route --route_chan_width 500 --router_heap bucket --clock_modeling route --place_delta_delay_matrix_calculation_method dijkstra --place_delay_model delta --router_lookahead extended_map --check_route quick --strict_checks off --allow_dangling_combinational_nodes on --disable_errors check_unbuffered_edges:check_route --congested_routing_iteration_threshold 0.8 --incremental_reroute_delay_ripup off --base_cost_type delay_normalized_length_bounded --bb_factor 10 --acc_fac 0.7 --astar_fac 1.8 --initial_pres_fac 2.828 --pres_fac_mult 1.2 --check_rr_graph off --suppress_warnings noisy_warnings.log,sum_pin_class:check_unbuffered_edges:load_rr_indexed_data_T_values:check_rr_node:trans_per_R:check_route:set_rr_graph_tool_comment:calculate_average_switch
+genfasm /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/arch.timing.xml /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.eblif --device xc7a50t-test --read_rr_graph /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.rr_graph.real.bin --max_router_iterations 500 --routing_failure_predictor off --router_high_fanout_threshold -1 --constant_net_method route --route_chan_width 500 --router_heap bucket --clock_modeling route --place_delta_delay_matrix_calculation_method dijkstra --place_delay_model delta --router_lookahead extended_map --check_route quick --strict_checks off --allow_dangling_combinational_nodes on --disable_errors check_unbuffered_edges:check_route --congested_routing_iteration_threshold 0.8 --incremental_reroute_delay_ripup off --base_cost_type delay_normalized_length_bounded --bb_factor 10 --acc_fac 0.7 --astar_fac 1.8 --initial_pres_fac 2.828 --pres_fac_mult 1.2 --check_rr_graph off --suppress_warnings noisy_warnings.log,sum_pin_class:check_unbuffered_edges:load_rr_indexed_data_T_values:check_rr_node:trans_per_R:check_route:set_rr_graph_tool_comment:calculate_average_switch
 
 Using up to 1 parallel worker(s)
 
@@ -839,7 +839,7 @@ Warning 817: Model 'VCC' output port 'VCC' has no timing specification (no clock
 Warning 818: Model 'GND' output port 'GND' has no timing specification (no clock specified to create a sequential output port, not combinationally connected to any inputs, not a clock output)
 Warning 819: <pb_type> 'empty' timing-annotation/<model> mismatch on port 'D' of model '.latch', port is a sequential input but has neither T_setup nor T_hold specified
 Warning 820: <pb_type> 'empty' timing-annotation/<model> mismatch on port 'Q' of model '.latch', port is a sequential output but has neither min nor max T_clock_to_Q specified
-Loading Architecture Description took 0.99 seconds (max_rss 58.5 MiB, delta_rss +43.5 MiB)
+Loading Architecture Description took 1.08 seconds (max_rss 58.4 MiB, delta_rss +43.3 MiB)
 
 Warning 821: Non-zero switch output capacitance (4e-15) has no effect when switch 'buffer' is used for connection block inputs
 Timing analysis: ON
@@ -954,11 +954,11 @@ AnalysisOpts.post_synth_netlist_unconn_input_handling: UNCONNECTED
 AnalysisOpts.post_synth_netlist_unconn_output_handling: UNCONNECTED
 
 Building complex block graph
-Building complex block graph took 0.05 seconds (max_rss 58.5 MiB, delta_rss +0.0 MiB)
-Circuit file: /home/yatharth/gf180_project/PUF/build/arty_35/PUF.eblif
+Building complex block graph took 0.05 seconds (max_rss 58.4 MiB, delta_rss +0.0 MiB)
+Circuit file: /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.eblif
 Load circuit
 Found constant-zero generator '$abc$6701$auto$blifparse.cc:525:parse_blif$7447.T1'
-Load circuit took 0.04 seconds (max_rss 58.5 MiB, delta_rss +0.0 MiB)
+Load circuit took 0.04 seconds (max_rss 58.4 MiB, delta_rss +0.0 MiB)
 Clean circuit
 Absorbed 1990 LUT buffers
 Inferred   19 additional primitive pins as constant generators since they have no combinationally connected inputs
@@ -972,11 +972,11 @@ Swept output(s)     : 0 (0 dangling, 0 constant)
 Swept net(s)        : 337
 Swept block(s)      : 1
 Constant Pins Marked: 28
-Clean circuit took 0.00 seconds (max_rss 58.5 MiB, delta_rss +0.0 MiB)
+Clean circuit took 0.00 seconds (max_rss 58.4 MiB, delta_rss +0.0 MiB)
 Compress circuit
-Compress circuit took 0.00 seconds (max_rss 58.5 MiB, delta_rss +0.0 MiB)
+Compress circuit took 0.00 seconds (max_rss 58.4 MiB, delta_rss +0.0 MiB)
 Verify circuit
-Verify circuit took 0.00 seconds (max_rss 58.5 MiB, delta_rss +0.0 MiB)
+Verify circuit took 0.00 seconds (max_rss 58.4 MiB, delta_rss +0.0 MiB)
 Circuit Statistics:
   Blocks: 1404
     .input         :      11
@@ -1330,7 +1330,7 @@ Warning 1150: Arbitrarily disabling timing graph edge 29 (parallel_scheme.block7
   Timing Graph Nodes: 6789
   Timing Graph Edges: 11547
   Timing Graph Levels: 30
-Build Timing Graph took 0.01 seconds (max_rss 58.5 MiB, delta_rss +0.0 MiB)
+Build Timing Graph took 0.01 seconds (max_rss 58.4 MiB, delta_rss +0.0 MiB)
 Netlist contains 16 clocks
   Netlist Clock 'parallel_scheme.block0.second_mux_out' Fanout: 23 pins (0.3%), 23 blocks (1.6%)
   Netlist Clock 'parallel_scheme.block0.pmc1.clk' Fanout: 23 pins (0.3%), 23 blocks (1.6%)
@@ -1374,13 +1374,13 @@ Timing constraints created 17 clocks
   Constrained Clock 'parallel_scheme.block7.second_mux_out' Source: '$abc$6701$auto$blifparse.cc:525:parse_blif$7183.fpga_mux_0.O[0]'
   Constrained Clock 'parallel_scheme.block7.pmc1.clk' Source: '$abc$6701$auto$blifparse.cc:525:parse_blif$7195.fpga_mux_0.O[0]'
 
-Load Timing Constraints took 0.00 seconds (max_rss 58.5 MiB, delta_rss +0.0 MiB)
+Load Timing Constraints took 0.00 seconds (max_rss 58.4 MiB, delta_rss +0.0 MiB)
 Load packing
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'PUF.net'.
 Detected 18 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.136665 seconds).
-Load packing took 0.14 seconds (max_rss 102.5 MiB, delta_rss +43.9 MiB)
+Finished loading packed FPGA netlist file (took 0.139033 seconds).
+Load packing took 0.14 seconds (max_rss 102.4 MiB, delta_rss +44.0 MiB)
 Warning 1151: Netlist contains 0 global net to non-global architecture pin connections
 Warning 1152: Logic block #204 ($false) has only 1 output pin '$false.GND[0]'. It may be a constant generator.
 Warning 1153: Logic block #205 ($true) has only 1 output pin '$true.VCC[0]'. It may be a constant generator.
@@ -1600,45 +1600,45 @@ Device Utilization: 0.01 (target 1.00)
 	Physical Tile SYN-GND:
 	Block Utilization: 1.00 Logical Block: SYN-GND
 
-# Build Device Grid took 0.03 seconds (max_rss 102.5 MiB, delta_rss +0.0 MiB)
+# Build Device Grid took 0.03 seconds (max_rss 102.4 MiB, delta_rss +0.0 MiB)
 # Loading routing resource graph
 
 
 
 Warning 1154: This architecture version is for VPR 8.1.0-dev+c012f19d3 while your current VPR version is 8.1.0-dev+25e723a24-dirty, compatibility issues may arise
 
-# Loading routing resource graph took 12.51 seconds (max_rss 3949.3 MiB, delta_rss +3846.8 MiB)
+# Loading routing resource graph took 12.99 seconds (max_rss 3949.2 MiB, delta_rss +3846.8 MiB)
   RR Graph Nodes: 2934684
   RR Graph Edges: 22357697
-Create Device took 13.15 seconds (max_rss 3949.3 MiB, delta_rss +3846.8 MiB)
+Create Device took 13.62 seconds (max_rss 3949.2 MiB, delta_rss +3846.8 MiB)
 
 Load Placement
 Reading PUF.place.
 
 Successfully read PUF.place.
 
-Load Placement took 0.01 seconds (max_rss 3949.3 MiB, delta_rss +0.0 MiB)
+Load Placement took 0.01 seconds (max_rss 3949.2 MiB, delta_rss +0.0 MiB)
 
 Load Routing
 Begin loading FPGA routing file.
 Finished loading route file
-Load Routing took 0.14 seconds (max_rss 3949.3 MiB, delta_rss +0.0 MiB)
+Load Routing took 0.15 seconds (max_rss 3949.2 MiB, delta_rss +0.0 MiB)
 
 Checking to ensure routing is legal...
 Completed routing consistency check successfully.
 
 Serial number (magic cookie) for the routing is: -166641997
 Circuit successfully routed with a channel width factor of 500.
-Incr Slack updates 1 in 0.000122449 sec
-Full Max Req/Worst Slack updates 1 in 0.000119974 sec
+Incr Slack updates 1 in 0.000119923 sec
+Full Max Req/Worst Slack updates 1 in 0.000119599 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 1 in 0.000227499 sec
+Full Criticality updates 1 in 0.000224694 sec
 Synchronize the packed netlist to routing optimization
 # Annotating rr_node with routed nets
-# Annotating rr_node with routed nets took 0.00 seconds (max_rss 3949.3 MiB, delta_rss +0.0 MiB)
+# Annotating rr_node with routed nets took 0.00 seconds (max_rss 3949.2 MiB, delta_rss +0.0 MiB)
 Found 0 mismatches between routing and packing results.
 Fixed 0 routing traces due to mismatch between routing and packing results.
-Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 3949.3 MiB, delta_rss +0.0 MiB)
+Synchronize the packed netlist to routing optimization took 0.00 seconds (max_rss 3949.2 MiB, delta_rss +0.0 MiB)
 Writing Implementation FASM: PUF.fasm
-The entire flow of VPR took 17.7646 seconds.
+The entire flow of VPR took 18.5163 seconds.

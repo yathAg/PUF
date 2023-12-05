@@ -22,8 +22,8 @@ endmodule
 module puf_parallel(
   input enable,
   input [7:0] challenge,
-  output reg [7:0] out,
-  output reg all_done,
+  output  [7:0] out,
+  output  all_done,
   input computer_reset
 );
 
@@ -93,8 +93,8 @@ endmodule
 module puf_parallel_subblock(
     input [7:0] challenge,
     input enable,
-    output reg out,
-    output reg done,
+    output out,
+    output done,
     input reset
 );
 
@@ -125,13 +125,13 @@ module puf_parallel_subblock(
     endgenerate
 
     mux_16to1 first_mux (
-    .in(ro_out[0:15]),
+    .in(ro_out[15:0]),
     .sel(challenge[3:0]),
     .out(first_mux_out)
     );
 
     mux_16to1 second_mux (
-    .in(ro_out[16:31]),
+    .in(ro_out[31:16]),
     .sel(challenge[7:4]),
     .out(second_mux_out)
     );
@@ -139,7 +139,7 @@ module puf_parallel_subblock(
     post_mux_counter pmc1 (
     .out(pmc1_out),
     .finished(fin1),
-    .enable(enable[0]),
+    .enable(enable),
     .clk(first_mux_out),
     .reset(reset)
     );
@@ -147,7 +147,7 @@ module puf_parallel_subblock(
     post_mux_counter pmc2 (
     .out(pmc2_out),
     .finished(fin2),
-    .enable(enable[0]),
+    .enable(enable),
     .clk(second_mux_out),
     .reset(reset)
     );
@@ -162,7 +162,7 @@ module puf_parallel_subblock(
 endmodule
 
 module ring_osc (
-  output reg out,
+  output out,
   input enable
   );
   
@@ -242,7 +242,7 @@ module race_arbiter (
   input finished2,
   input reset,
   output reg out,
-  output reg done
+  output  done
   );
   wire cnt1_done, cnt2_done, winner;
 

@@ -11,7 +11,7 @@ vtr-users@googlegroups.com
 This is free open source code under MIT license.
 
 VPR was run with the following command-line:
-vpr /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/arch.timing.xml /home/yatharth/gf180_project/PUF/build/arty_35/PUF.eblif --device xc7a50t-test --read_rr_graph /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.rr_graph.real.bin --read_router_lookahead /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.lookahead.bin --read_placement_delay_lookup /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.place_delay.bin --place --max_router_iterations 500 --routing_failure_predictor off --router_high_fanout_threshold -1 --constant_net_method route --route_chan_width 500 --router_heap bucket --clock_modeling route --place_delta_delay_matrix_calculation_method dijkstra --place_delay_model delta --router_lookahead extended_map --check_route quick --strict_checks off --allow_dangling_combinational_nodes on --disable_errors check_unbuffered_edges:check_route --congested_routing_iteration_threshold 0.8 --incremental_reroute_delay_ripup off --base_cost_type delay_normalized_length_bounded --bb_factor 10 --acc_fac 0.7 --astar_fac 1.8 --initial_pres_fac 2.828 --pres_fac_mult 1.2 --check_rr_graph off --suppress_warnings noisy_warnings.log,sum_pin_class:check_unbuffered_edges:load_rr_indexed_data_T_values:check_rr_node:trans_per_R:check_route:set_rr_graph_tool_comment:calculate_average_switch --fix_clusters /home/yatharth/gf180_project/PUF/build/arty_35/PUF.preplace --sdc_file /home/yatharth/gf180_project/PUF/build/arty_35/xc7a50t_test_sdc.sdc
+vpr /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/arch.timing.xml /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.eblif --device xc7a50t-test --read_rr_graph /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.rr_graph.real.bin --read_router_lookahead /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.lookahead.bin --read_placement_delay_lookup /home/yatharth/opt/f4pga/xc7/share/f4pga/arch/xc7a50t_test/rr_graph_xc7a50t_test.place_delay.bin --place --max_router_iterations 500 --routing_failure_predictor off --router_high_fanout_threshold -1 --constant_net_method route --route_chan_width 500 --router_heap bucket --clock_modeling route --place_delta_delay_matrix_calculation_method dijkstra --place_delay_model delta --router_lookahead extended_map --check_route quick --strict_checks off --allow_dangling_combinational_nodes on --disable_errors check_unbuffered_edges:check_route --congested_routing_iteration_threshold 0.8 --incremental_reroute_delay_ripup off --base_cost_type delay_normalized_length_bounded --bb_factor 10 --acc_fac 0.7 --astar_fac 1.8 --initial_pres_fac 2.828 --pres_fac_mult 1.2 --check_rr_graph off --suppress_warnings noisy_warnings.log,sum_pin_class:check_unbuffered_edges:load_rr_indexed_data_T_values:check_rr_node:trans_per_R:check_route:set_rr_graph_tool_comment:calculate_average_switch --fix_clusters /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.preplace --sdc_file /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/xc7a50t_test_sdc.sdc
 
 Using up to 1 parallel worker(s)
 
@@ -839,14 +839,14 @@ Warning 817: Model 'VCC' output port 'VCC' has no timing specification (no clock
 Warning 818: Model 'GND' output port 'GND' has no timing specification (no clock specified to create a sequential output port, not combinationally connected to any inputs, not a clock output)
 Warning 819: <pb_type> 'empty' timing-annotation/<model> mismatch on port 'D' of model '.latch', port is a sequential input but has neither T_setup nor T_hold specified
 Warning 820: <pb_type> 'empty' timing-annotation/<model> mismatch on port 'Q' of model '.latch', port is a sequential output but has neither min nor max T_clock_to_Q specified
-# Loading Architecture Description took 0.99 seconds (max_rss 58.3 MiB, delta_rss +43.3 MiB)
+# Loading Architecture Description took 1.01 seconds (max_rss 58.3 MiB, delta_rss +43.2 MiB)
 
 Warning 821: Non-zero switch output capacitance (4e-15) has no effect when switch 'buffer' is used for connection block inputs
 Timing analysis: ON
 Circuit netlist file: PUF.net
 Circuit placement file: PUF.place
 Circuit routing file: PUF.route
-Circuit SDC file: /home/yatharth/gf180_project/PUF/build/arty_35/xc7a50t_test_sdc.sdc
+Circuit SDC file: /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/xc7a50t_test_sdc.sdc
 Vpr floorplanning constraints file: not specified
 
 Packer: ENABLED
@@ -878,7 +878,7 @@ PackerOpts.target_external_pin_util: auto
 PlacerOpts.place_freq: PLACE_ONCE
 PlacerOpts.place_algorithm: CRITICALITY_TIMING_PLACE
 PlacerOpts.pad_loc_type: FREE
-PlacerOpts.constraints_file: Using constraints file '/home/yatharth/gf180_project/PUF/build/arty_35/PUF.preplace'
+PlacerOpts.constraints_file: Using constraints file '/home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.preplace'
 PlacerOpts.place_cost_exp: 1.000000
 PlacerOpts.place_chan_width: 500
 PlacerOpts.inner_loop_recompute_divider: 0
@@ -906,7 +906,7 @@ AnnealSched.inner_num: 0.500000
 
 # Building complex block graph
 # Building complex block graph took 0.05 seconds (max_rss 58.3 MiB, delta_rss +0.0 MiB)
-Circuit file: /home/yatharth/gf180_project/PUF/build/arty_35/PUF.eblif
+Circuit file: /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.eblif
 # Load circuit
 Found constant-zero generator '$abc$6701$auto$blifparse.cc:525:parse_blif$7447.T1'
 # Load circuit took 0.04 seconds (max_rss 58.3 MiB, delta_rss +0.0 MiB)
@@ -923,7 +923,7 @@ Swept output(s)     : 0 (0 dangling, 0 constant)
 Swept net(s)        : 337
 Swept block(s)      : 1
 Constant Pins Marked: 28
-# Clean circuit took 0.01 seconds (max_rss 58.3 MiB, delta_rss +0.0 MiB)
+# Clean circuit took 0.00 seconds (max_rss 58.3 MiB, delta_rss +0.0 MiB)
 # Compress circuit
 # Compress circuit took 0.00 seconds (max_rss 58.3 MiB, delta_rss +0.0 MiB)
 # Verify circuit
@@ -1301,7 +1301,7 @@ Netlist contains 16 clocks
   Netlist Clock 'parallel_scheme.block7.pmc1.clk' Fanout: 23 pins (0.3%), 23 blocks (1.6%)
 # Load Timing Constraints
 
-SDC file '/home/yatharth/gf180_project/PUF/build/arty_35/xc7a50t_test_sdc.sdc' contained no SDC commands
+SDC file '/home/yatharth/gf180_project/Verilog/PUF/build/arty_35/xc7a50t_test_sdc.sdc' contained no SDC commands
 Setting default timing constraints:
    * constrain all primay inputs and primary outputs on a virtual external clock 'virtual_io_clock'
    * optimize all netlist and virtual clocks to run as fast as possible
@@ -1330,7 +1330,7 @@ Timing constraints created 17 clocks
 Begin loading packed FPGA netlist file.
 Netlist generated from file 'PUF.net'.
 Detected 18 constant generators (to see names run with higher pack verbosity)
-Finished loading packed FPGA netlist file (took 0.138817 seconds).
+Finished loading packed FPGA netlist file (took 0.141666 seconds).
 # Load packing took 0.14 seconds (max_rss 102.2 MiB, delta_rss +43.9 MiB)
 Warning 1151: Netlist contains 0 global net to non-global architecture pin connections
 Warning 1152: Logic block #204 ($false) has only 1 output pin '$false.GND[0]'. It may be a constant generator.
@@ -1551,17 +1551,17 @@ Device Utilization: 0.01 (target 1.00)
 	Physical Tile SYN-GND:
 	Block Utilization: 1.00 Logical Block: SYN-GND
 
-## Build Device Grid took 0.02 seconds (max_rss 102.2 MiB, delta_rss +0.0 MiB)
+## Build Device Grid took 0.03 seconds (max_rss 102.2 MiB, delta_rss +0.0 MiB)
 ## Loading routing resource graph
 
 
 
 Warning 1154: This architecture version is for VPR 8.1.0-dev+c012f19d3 while your current VPR version is 8.1.0-dev+25e723a24-dirty, compatibility issues may arise
 
-## Loading routing resource graph took 6.45 seconds (max_rss 3298.4 MiB, delta_rss +3196.2 MiB)
+## Loading routing resource graph took 6.63 seconds (max_rss 3298.5 MiB, delta_rss +3196.2 MiB)
   RR Graph Nodes: 2934684
   RR Graph Edges: 22357697
-# Create Device took 7.06 seconds (max_rss 3298.4 MiB, delta_rss +3196.2 MiB)
+# Create Device took 7.30 seconds (max_rss 3298.5 MiB, delta_rss +3196.2 MiB)
 
 # Computing src/opin lookahead
 Warning 1155: Found no more sample locations for SOURCE in BLK-TL-BRAM_L
@@ -1598,7 +1598,7 @@ Warning 1185: Found no more sample locations for SOURCE in BLK-TL-GTP_CHANNEL_3
 Warning 1186: Found no more sample locations for OPIN in BLK-TL-GTP_CHANNEL_3
 Warning 1187: Found no more sample locations for SOURCE in BLK-TL-PCIE_BOT
 Warning 1188: Found no more sample locations for OPIN in BLK-TL-PCIE_BOT
-# Computing src/opin lookahead took 0.00 seconds (max_rss 3298.4 MiB, delta_rss +0.0 MiB)
+# Computing src/opin lookahead took 0.01 seconds (max_rss 3298.5 MiB, delta_rss +0.0 MiB)
 # Computing chan/ipin lookahead
 Warning 1189: Found no sample locations for EMPTY
 Warning 1190: Found no sample locations for BLK-TL-CLBLL_L
@@ -1627,11 +1627,11 @@ Warning 1212: Found no sample locations for BLK-TL-GTP_CHANNEL_3
 Warning 1213: Found no sample locations for BLK-TL-PCIE_BOT
 Warning 1214: Found no sample locations for SYN-VCC
 Warning 1215: Found no sample locations for SYN-GND
-# Computing chan/ipin lookahead took 0.01 seconds (max_rss 3298.4 MiB, delta_rss +0.0 MiB)
+# Computing chan/ipin lookahead took 0.02 seconds (max_rss 3298.5 MiB, delta_rss +0.0 MiB)
 # Computing placement delta delay look-up
   RR Graph Nodes: 2934684
   RR Graph Edges: 22357697
-# Computing placement delta delay look-up took 0.64 seconds (max_rss 3298.4 MiB, delta_rss +0.0 MiB)
+# Computing placement delta delay look-up took 0.72 seconds (max_rss 3298.5 MiB, delta_rss +0.0 MiB)
 Using simple RL 'Softmax agent' for choosing move types
 Warning 1216: CHANX place cost fac is 0 at 0 0
 Warning 1217: CHANX place cost fac is 0 at 52 52
@@ -1660,11 +1660,11 @@ Warning 1239: CHANY place cost fac is 0 at 116 115
 Warning 1240: CHANY place cost fac is 0 at 116 116
 # Placement
 ## Initial Placement
-Reading /home/yatharth/gf180_project/PUF/build/arty_35/PUF.preplace.
+Reading /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.preplace.
 
-Successfully read constraints file /home/yatharth/gf180_project/PUF/build/arty_35/PUF.preplace.
+Successfully read constraints file /home/yatharth/gf180_project/Verilog/PUF/build/arty_35/PUF.preplace.
 
-## Initial Placement took 0.01 seconds (max_rss 3298.4 MiB, delta_rss +0.0 MiB)
+## Initial Placement took 0.01 seconds (max_rss 3298.5 MiB, delta_rss +0.0 MiB)
 
 There are 2807 point to point connections in this circuit.
 
@@ -1850,7 +1850,7 @@ Checkpoint saved: bb_costs=30.8, TD costs=3.63003e-07, CPD=  9.524 (ns)
  150    0.0 5.8e-06   1.000      30.67 3.5975e-07   9.660  -4.04e+03   -9.660   0.039  0.0001    1.0     8.00     91200  0.800
  151    0.0 4.6e-06   1.000      30.67 3.6007e-07   9.660  -4.04e+03   -9.660   0.033  0.0000    1.0     8.00     91808  0.800
  152    0.0 0.0e+00   1.000      30.66 3.6037e-07   9.660  -4.04e+03   -9.660   0.018  0.0000    1.0     8.00     92416  0.800
-## Placement Quench took 0.01 seconds (max_rss 3298.4 MiB)
+## Placement Quench took 0.01 seconds (max_rss 3298.5 MiB)
 post-quench CPD = 9.65966 (ns) 
 
 Checkpoint restored
@@ -2016,16 +2016,16 @@ Percentage of different move types:
 	Crit. Uniform move: 1.51 % (acc=1.36 %, rej=84.79 %, aborted=13.85 %)
 	Feasible Region move: 1.07 % (acc=3.12 %, rej=80.58 %, aborted=16.30 %)
 
-Placement Quench timing analysis took 0.0021613 seconds (0.00177762 STA, 0.000383674 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
-Placement Total  timing analysis took 0.348917 seconds (0.283248 STA, 0.0656687 slack) (155 full updates: 155 setup, 0 hold, 0 combined).
+Placement Quench timing analysis took 0.0022418 seconds (0.00184014 STA, 0.000401661 slack) (1 full updates: 1 setup, 0 hold, 0 combined).
+Placement Total  timing analysis took 0.36639 seconds (0.296265 STA, 0.0701252 slack) (155 full updates: 155 setup, 0 hold, 0 combined).
 update_td_costs: connections 0 nets 0 sum_nets 0 total 0
-# Placement took 1.39 seconds (max_rss 3298.4 MiB, delta_rss +0.0 MiB)
-Incr Slack updates 155 in 0.0168285 sec
-Full Max Req/Worst Slack updates 155 in 0.0168006 sec
+# Placement took 1.46 seconds (max_rss 3298.5 MiB, delta_rss +0.0 MiB)
+Incr Slack updates 155 in 0.0178909 sec
+Full Max Req/Worst Slack updates 155 in 0.0174722 sec
 Incr Max Req/Worst Slack updates 0 in 0 sec
 Incr Criticality updates 0 in 0 sec
-Full Criticality updates 155 in 0.0283404 sec
+Full Criticality updates 155 in 0.0308302 sec
 
-Flow timing analysis took 0.348917 seconds (0.283248 STA, 0.0656687 slack) (155 full updates: 155 setup, 0 hold, 0 combined).
+Flow timing analysis took 0.36639 seconds (0.296265 STA, 0.0701252 slack) (155 full updates: 155 setup, 0 hold, 0 combined).
 VPR succeeded
-The entire flow of VPR took 10.49 seconds (max_rss 3298.4 MiB)
+The entire flow of VPR took 10.89 seconds (max_rss 3298.5 MiB)

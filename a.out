@@ -1,0 +1,74 @@
+#! /usr/local/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+S_0x5575334df6c0 .scope module, "tb_ring_osc" "tb_ring_osc" 2 3;
+ .timescale -9 -12;
+v0x557533507290_0 .var "en", 0 0;
+v0x557533507330_0 .net "w14", 0 0, L_0x5575335081b0;  1 drivers
+S_0x5575334b5cf0 .scope module, "ro0" "ring_osc" 2 9, 3 1 0, S_0x5575334df6c0;
+ .timescale -9 -12;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "enable";
+L_0x5575335073d0 .functor AND 1, v0x557533507290_0, L_0x557533507500, C4<1>, C4<1>;
+L_0x557533507440 .functor NOT 1, L_0x5575335073d0, C4<0>, C4<0>, C4<0>;
+L_0x557533507500 .functor NOT 1, L_0x5575335075c0, C4<0>, C4<0>, C4<0>;
+L_0x5575335075c0 .functor NOT 1, L_0x5575335076b0, C4<0>, C4<0>, C4<0>;
+L_0x5575335076b0 .functor NOT 1, L_0x557533507770, C4<0>, C4<0>, C4<0>;
+L_0x557533507770 .functor NOT 1, L_0x557533507870, C4<0>, C4<0>, C4<0>;
+L_0x557533507870 .functor NOT 1, L_0x557533507930, C4<0>, C4<0>, C4<0>;
+L_0x557533507930 .functor NOT 1, L_0x557533507a40, C4<0>, C4<0>, C4<0>;
+L_0x557533507a40 .functor NOT 1, L_0x557533507b00, C4<0>, C4<0>, C4<0>;
+L_0x557533507b00 .functor NOT 1, L_0x557533507c20, C4<0>, C4<0>, C4<0>;
+L_0x557533507c20 .functor NOT 1, L_0x557533507c90, C4<0>, C4<0>, C4<0>;
+L_0x557533507c90 .functor NOT 1, L_0x557533507dc0, C4<0>, C4<0>, C4<0>;
+L_0x557533507dc0 .functor NOT 1, L_0x557533507e80, C4<0>, C4<0>, C4<0>;
+L_0x557533507e80 .functor NOT 1, L_0x557533507d50, C4<0>, C4<0>, C4<0>;
+L_0x557533507d50 .functor NOT 1, L_0x557533508010, C4<0>, C4<0>, C4<0>;
+L_0x557533508010 .functor NOT 1, L_0x557533507440, C4<0>, C4<0>, C4<0>;
+L_0x5575335081b0 .functor BUFZ 1, L_0x557533507500, C4<0>, C4<0>, C4<0>;
+v0x5575334b5ed0_0 .net *"_ivl_0", 0 0, L_0x5575335073d0;  1 drivers
+v0x557533506540_0 .net "enable", 0 0, v0x557533507290_0;  1 drivers
+v0x557533506600_0 .net "out", 0 0, L_0x5575335081b0;  alias, 1 drivers
+v0x5575335066a0_0 .net "w1", 0 0, L_0x557533508010;  1 drivers
+v0x557533506760_0 .net "w10", 0 0, L_0x557533507870;  1 drivers
+v0x557533506870_0 .net "w11", 0 0, L_0x557533507770;  1 drivers
+v0x557533506930_0 .net "w12", 0 0, L_0x5575335076b0;  1 drivers
+v0x5575335069f0_0 .net "w13", 0 0, L_0x5575335075c0;  1 drivers
+v0x557533506ab0_0 .net "w14", 0 0, L_0x557533507500;  1 drivers
+v0x557533506b70_0 .net "w15", 0 0, L_0x557533507440;  1 drivers
+v0x557533506c30_0 .net "w2", 0 0, L_0x557533507d50;  1 drivers
+v0x557533506cf0_0 .net "w3", 0 0, L_0x557533507e80;  1 drivers
+v0x557533506db0_0 .net "w4", 0 0, L_0x557533507dc0;  1 drivers
+v0x557533506e70_0 .net "w5", 0 0, L_0x557533507c90;  1 drivers
+v0x557533506f30_0 .net "w6", 0 0, L_0x557533507c20;  1 drivers
+v0x557533506ff0_0 .net "w7", 0 0, L_0x557533507b00;  1 drivers
+v0x5575335070b0_0 .net "w8", 0 0, L_0x557533507a40;  1 drivers
+v0x557533507170_0 .net "w9", 0 0, L_0x557533507930;  1 drivers
+    .scope S_0x5575334df6c0;
+T_0 ;
+    %vpi_call 2 12 "$display", "Starting Ring Oscillator Test" {0 0 0};
+    %vpi_call 2 13 "$monitor", "Output of ro0: %b\011 Time: %0t", v0x557533507330_0, $time {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x557533507290_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x557533507290_0, 0, 1;
+    %delay 20000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x557533507290_0, 0, 1;
+    %delay 200000, 0;
+    %vpi_call 2 28 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_ringosc.v";
+    "split_ring_osc.v";
