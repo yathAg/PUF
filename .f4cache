@@ -1,0 +1,57 @@
+{
+    "/home/yatharth/gf180_project/PUF/PUF.v": {
+        "synth": 3455822541
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35": {
+        "synth": 0,
+        "place": 0
+    },
+    "/home/yatharth/gf180_project/PUF/arty.xdc": {
+        "synth": 1634713036
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.eblif": {
+        "fasm": 1565563470,
+        "pack": 1565563470,
+        "place": 1565563470,
+        "place_constraints": 1565563470,
+        "ioplace": 1565563470,
+        "route": 1565563470
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/xc7a50t_test_sdc.sdc": {
+        "pack": 1,
+        "place": 1,
+        "route": 1,
+        "fasm": 1
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.net": {
+        "fasm": 1827482851,
+        "place_constraints": 1827482851,
+        "ioplace": 1827482851
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.ioplace": {
+        "place_constraints": 2746235715,
+        "place": 2746235715
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.preplace": {
+        "place": 2746235715
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.place": {
+        "fasm": 4107811938,
+        "route": 4107811938
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.route": {
+        "fasm": 1830470133
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF_fasm_extra.fasm": {
+        "fasm": 1
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.fasm": {
+        "bitstream": 218911005
+    },
+    "/home/yatharth/gf180_project/PUF/build/arty_35/PUF.bit": {
+        "__target": 2172184200
+    },
+    "/home/yatharth/gf180_project/PUF/PUF_combine.v": {
+        "synth": 3856297014
+    }
+}

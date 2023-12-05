@@ -1,9 +1,8 @@
 module puf_parallel(
-  input [31:0] enable,
+  input enable,
   input [7:0] challenge,
   output reg [7:0] out,
   output reg all_done,
-  input clock,
   input computer_reset
 );
 
